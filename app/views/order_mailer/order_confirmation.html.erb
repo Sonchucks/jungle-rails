@@ -19,7 +19,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th colspan="2">Product</th>
+          <th>Product</th>
           <th>Unit Price</th>
           <th>Quantity</th>
           <th>Price</th>
@@ -28,9 +28,6 @@
       <tbody>
       <% @items.each do |item| %>
       <tr>
-        <td>
-          <%= image_tag image_url(item.product.image.tiny) %>
-        </td>
         <td>
           <h4><%= item.product.name %></h4>
           <br>
