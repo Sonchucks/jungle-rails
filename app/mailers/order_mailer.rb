@@ -1,11 +1,11 @@
 class OrderMailer < ApplicationMailer
   default from: "no-reply@jungle.com"
 
-  def order_confirmation(user, order, items)
-    @user = user
+  def order_confirmation(order, user)
     @order = order
-    @items = items
+    @user = user
+    @items = LineItem.where(order_id: @order.id)
 
-    mail to: user.email, subject: "Order Details"
+    mail to: user.email , subject: "Order ##{order.id} Details"
   end
 end

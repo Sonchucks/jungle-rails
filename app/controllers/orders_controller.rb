@@ -8,10 +8,11 @@ class OrdersController < ApplicationController
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
+    user = user_info
 
     if order.valid?
+      OrderMailer.order_confirmation(order, user).deliver
       empty_cart!
-      OrderMailer.order_confirmation().deliver
       redirect_to order, notice: 'Your Order has been placed.'
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
@@ -26,6 +27,10 @@ class OrdersController < ApplicationController
   def empty_cart!
     # empty hash means no products in cart :)
     update_cart({})
+  end
+
+  def user_info
+    user = User.find_by_id(session[:user_id])
   end
 
   def perform_stripe_charge
@@ -43,7 +48,6 @@ class OrdersController < ApplicationController
       total_cents: cart_subtotal_cents,
       stripe_charge_id: stripe_charge.id, # returned by stripe
     )
-
     enhanced_cart.each do |entry|
       product = entry[:product]
       quantity = entry[:quantity]
