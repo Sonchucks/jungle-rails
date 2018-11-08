@@ -22,8 +22,13 @@ end
 # Let's do this ...
 
 ## CATEGORIES
+LineItem.destroy_all
+Order.destroy_all
+Product.destroy_all
+Category.destroy_all
 
 puts "Finding or Creating Categories ..."
+
 
 cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
@@ -33,7 +38,6 @@ cat3 = Category.find_or_create_by! name: 'Furniture'
 
 puts "Re-creating Products ..."
 
-Product.destroy_all
 
 cat1.products.create!({
   name:  'Men\'s Classy shirt',
@@ -133,5 +137,32 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+
+puts "Re-creating a User ..."
+
+User.destroy_all
+
+User.create!(
+  first_name: "David",
+  last_name: "Son",
+  email: "son.hyun.uk@hotmail.com",
+  password: "password"
+  )
+
+puts "DONE!"
+
+puts "Re-creating Product Reviews ..."
+
+
+Review.destroy_all
+
+  10.times do |t|
+    Review.create!(
+      product_id: Product.order("RANDOM()").first.id,
+      user_id: User.first.id,
+      description: Faker::Hipster.paragraph(4),
+      rating: rand(5) + 1
+    )
+  end
 
 puts "DONE!"

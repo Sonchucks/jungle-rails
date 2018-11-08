@@ -28,4 +28,16 @@
 
   </article>
 
+  <h2>Reviews</h2>
+  <% @review.each do |review| %>
+    <p>
+      <strong>Description</strong>
+      <%= review.description %>
+    </p>
+    <p>
+      <strong>Rating</strong>
+      <%= review.rating %>
+    </p>
+  <% end %>
+
 </section>
