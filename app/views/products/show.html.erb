@@ -16,6 +16,8 @@
         <dl class="dl-horizontal">
           <dt>Name</dt>
           <dd><%= @product.name %></dd>
+          <dt>Rating</dt>
+          <dd><%= @product.reviews.average(:rating).round(2) %>/5</dd>
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
           <dt>Quantity</dt>
@@ -28,8 +30,15 @@
 
   </article>
 
+  <% if session[:user_id] %>
+
+  <% end %>
+
   <h2>Reviews</h2>
   <% @product.reviews.each do |review| %>
+    <p>
+      <strong>User</strong>
+      <%= User.find_by_id(review.user_id).first_name %>
     <p>
       <strong>Description</strong>
       <%= review.description %>
