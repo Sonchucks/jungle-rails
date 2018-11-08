@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
   helper_method :current_user
 
   def authorize
@@ -35,6 +36,12 @@ class ApplicationController < ActionController::Base
       expires: 10.days.from_now
     }
     cookies[:cart]
+  end
+
+  def authenticate
+    authenticate_or_request_with_http_basic('Administration') do |username, password|
+      username == ENV["ADMIN_USER"] && password == ENV["ADMIN_PASS"]
+    end
   end
 
 end
