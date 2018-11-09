@@ -31,22 +31,30 @@
   </article>
 
   <% if session[:user_id] %>
-
+     <div class="col-sm-6 col-sm-offset-1">
+        <h2>Add a comment:</h2>
+        <%= form_for [@product, @review] do |f| %>
+          Comment: <%= f.text_area :description %><br />
+          Rating: <%= f.select(:rating, (1..5)) %><br />
+          <%= f.submit %>
+        <% end %>
+      </div>
   <% end %>
 
-  <h2>Reviews</h2>
-  <% @product.reviews.each do |review| %>
-    <p>
-      <strong>User</strong>
-      <%= User.find_by_id(review.user_id).first_name %>
-    <p>
-      <strong>Description</strong>
-      <%= review.description %>
-    </p>
-    <p>
-      <strong>Rating</strong>
-      <%= review.rating %>
-    </p>
-  <% end %>
+    <div class="row">
+      <h3>Reviews</h3>
+      <table class="table table-bordered">
+        <thead>
+          <th>User</th>
+          <th>Description</th>
+          <th>Rating</th>
+        </thead>
+          <tbody>
+            <%= render @product.reviews.reverse %>
+          </tbody>
+      </table>
+    </div>
+
+
 
 </section>
