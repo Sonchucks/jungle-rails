@@ -28,3 +28,38 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Stripe
 
 ## The Application
+
+### Home Page
+![Initial View]()
+As a guest
+![View when logged in and as admin]()
+As a registered user/admin
+
+### Admin Features
+![Admin Categories]()
+![Admin New Category]()
+![Admin Products]()
+![Admin New Product]()
+
+### Login Screen
+![Login]()
+
+### Registration Screen
+![Registration]()
+
+### Product Page
+![Product Sold Out Badge]()
+When a product is sold out, it'll display this "SOLD OUT!" badge in the top left corner in the main page.
+![Product Page as Visitor]()
+![Product Page as User]()
+As a user you can create reviews as well as delete any reviews you've created. Other users cannot delete your reviews.
+![View Products by Category]()
+Can view products by their category.
+
+
+### Checking Out
+![Empty Cart]()
+![Cart as Visitor]()
+![Cart as User]()
+![Successful Checkout]()
+![Email Order Details]()
