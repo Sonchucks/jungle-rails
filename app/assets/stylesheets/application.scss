@@ -15,3 +15,18 @@ body {
 form.button_to {
   display: inline;
 }
+
+#registration-form {
+  h1{
+    font-size: 3em;
+  }
+  div{
+    form{
+      .form-group{
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
