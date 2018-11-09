@@ -30,36 +30,59 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 ## The Application
 
 ### Home Page
-![Initial View]()
+
+![Initial View](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/initial-view.png)
+
 As a guest
-![View when logged in and as admin]()
+
+![View when logged in and as admin](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/logged-in-view.png)
+
 As a registered user/admin
 
 ### Admin Features
-![Admin Categories]()
-![Admin New Category]()
-![Admin Products]()
-![Admin New Product]()
+
+![Admin Categories](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/admin-categories.png)
+
+![Admin New Category](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/admin-new-category.png)
+
+![Admin Products](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/admin-products.png)
+
+![Admin New Product](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/admin-new-product.png)
 
 ### Login Screen
-![Login]()
+
+![Login](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/login-screen.png)
 
 ### Registration Screen
-![Registration]()
+
+![Registration](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/registration-screen.png)
 
 ### Product Page
-![Product Sold Out Badge]()
-When a product is sold out, it'll display this "SOLD OUT!" badge in the top left corner in the main page.
-![Product Page as Visitor]()
-![Product Page as User]()
+
+![Product Sold Out Badge](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/sold-out-badge.png)
+
+When a product is sold out, it'll display this "SOLD OUT!" badge in the top left corner in the main page and the add to card button will be disabled.
+
+![Product Page as Visitor](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/product-page-visitor.png)
+
+As a visitor, you can see all the product details along with it's overall rating (if there is one) and see all of the reviews for that specific product.
+
+![Product Page as User](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/product-page-user.png)
+
 As a user you can create reviews as well as delete any reviews you've created. Other users cannot delete your reviews.
-![View Products by Category]()
+
+![View Products by Category](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/view-by-category.png)
+
 Can view products by their category.
 
 
 ### Checking Out
-![Empty Cart]()
-![Cart as Visitor]()
-![Cart as User]()
-![Successful Checkout]()
-![Email Order Details]()
+![Empty Cart](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/cart-no-items.png)
+
+![Cart as Visitor](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/cart-no-user.png)
+
+![Cart as User](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/cart.png)
+
+![Successful Checkout](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/cart-success.png)
+
+![Email Order Details](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/email-order-details.png)
