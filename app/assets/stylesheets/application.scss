@@ -17,15 +17,28 @@ form.button_to {
 }
 
 #registration-form {
-  h1{
+  h1 {
     font-size: 3em;
   }
-  div{
-    form{
-      .form-group{
+  div {
+    form {
+      .form-group {
         input {
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+#login-form {
+  h1 {
+    font-size: 3em;
+  }
+  form {
+    .form-group {
+      input {
+        width: 100%;
       }
     }
   }
