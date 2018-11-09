@@ -3,11 +3,11 @@
   <td><%= "#{user.first_name} #{user.last_name}" %></td>
   <td><%= review.description %></td>
   <td><%= review.rating %></td>
-  <% if session[:user_id] == review.user_id %>
   <td>
-  <%= link_to 'Destroy Review', [review.product, review],
+  <% if session[:user_id] == review.user_id %>
+  <%= link_to '❌', [review.product, review],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
-  </td>
   <% end %>
+  </td>
 </tr>
