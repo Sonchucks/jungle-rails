@@ -17,7 +17,11 @@
           <dt>Name</dt>
           <dd><%= @product.name %></dd>
           <dt>Rating</dt>
-          <dd><%= @product.reviews.average(:rating).round(2) %>/5</dd>
+            <% if @product.reviews.count > 0 %>
+              <dd><%= @product.reviews.average(:rating).round(2) %>/5</dd>
+            <% else %>
+              <dd>This item hasn't been reviewed</dd>
+            <% end %>
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
           <dt>Quantity</dt>
@@ -53,20 +57,27 @@
       </div>
   <% end %>
 
-    <div class="row">
-      <h3>Reviews</h3>
-      <table class="table table-bordered">
-        <thead>
-          <th>User</th>
-          <th>Description</th>
-          <th>Rating</th>
-          <th></th>
-        </thead>
-          <tbody>
-            <%= render @product.reviews.reverse %>
-          </tbody>
-      </table>
-    </div>
+
+  <div class="row">
+    <h3>Reviews</h3>
+      <% if @product.reviews.count > 0 %>
+        <table class="table table-bordered">
+          <thead>
+            <th>User</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th></th>
+          </thead>
+            <tbody>
+              <%= render @product.reviews.reverse %>
+            </tbody>
+        </table>
+      <% else %>
+        <div class="alert alert-info" role="alert">
+          <strong>This item has yet to be reviewed!</strong>
+        </div>
+      <% end %>
+  </div>
 
 
 
