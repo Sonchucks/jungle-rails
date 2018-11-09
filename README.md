@@ -49,11 +49,11 @@ As a registered user/admin
 
 ![Admin New Product](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/admin-new-product.png)
 
-### Login Screen
+### Login Page
 
 ![Login](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/login-screen.png)
 
-### Registration Screen
+### Registration Page
 
 ![Registration](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/registration-screen.png)
 
@@ -61,7 +61,7 @@ As a registered user/admin
 
 ![Product Sold Out Badge](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/sold-out-badge.png)
 
-When a product is sold out, it'll display this "SOLD OUT!" badge in the top left corner in the main page and the add to card button will be disabled.
+When a product is sold out, it'll display this "SOLD OUT!" badge in the top left corner in the main page and the add button will be disabled.
 
 ![Product Page as Visitor](https://github.com/Sonchucks/jungle-rails/blob/cleanup/docs/product-page-visitor.png)
 
