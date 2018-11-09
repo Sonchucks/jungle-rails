@@ -31,12 +31,20 @@
   </article>
 
   <% if session[:user_id] %>
-     <div class="col-sm-6 col-sm-offset-1">
-        <h2>Add a comment:</h2>
+     <div id="review-form" class="row">
+        <h3>New Review:</h3>
         <%= form_for [@product, @review] do |f| %>
-          Comment: <%= f.text_area :description %><br />
-          Rating: <%= f.select(:rating, (1..5)) %><br />
+        <div class="form-group" >
+          <%= f.label :description, "Review" %><br>
+          <%= f.text_area :description %>
+        </div>
+        <div class="form-group">
+          <%= f.label :rating, "Rating" %><br>
+          <%= f.select(:rating, (1..5)) %>
+        </div>
+        <div class="form-group">
           <%= f.submit %>
+        </div>
         <% end %>
       </div>
   <% end %>

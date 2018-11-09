@@ -86,4 +86,16 @@ main section.products-show {
   }
 }
 
-
+#review-form {
+  div {
+    textarea {
+      width: 100%;
+    }
+    select {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+}
