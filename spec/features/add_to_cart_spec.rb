@@ -20,6 +20,6 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     click_on("Add", match: :first)
     # DEBUG / VERIFY
     save_screenshot
-    within('.navbar') { expect(page).to have_content('My Cart (1)') }
+    expect(page).to have_content('My Cart (1)')
   end
 end
